@@ -70,7 +70,8 @@ window.addEventListener('scroll',function(){
 
 let links = document.querySelectorAll('a');
 list.forEach((item, index) => {
-    links[index].addEventListener('click', function () {
+    links[index].addEventListener('click', function (e) {
+        e.preventDefault();
         item.scrollIntoView({behavior:"smooth"});
         item.classList.add('your-active-class');
     });
