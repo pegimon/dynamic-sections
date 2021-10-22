@@ -72,6 +72,7 @@ let links = document.querySelectorAll('a');
 list.forEach((item, index) => {
     links[index].addEventListener('click', function (e) {
         e.preventDefault();
+        overflow-y:scroll;
         item.scrollIntoView({behavior:"smooth"});
         item.classList.add('your-active-class');
     });
